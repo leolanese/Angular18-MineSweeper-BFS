@@ -1,0 +1,6 @@
+<div *ngFor="let x of grid" class="wrapper">
+  <button *ngFor="let y of x" [ngStyle]="{'width': button_size + 'px', 'height': button_size + 'px', 'color': y.color,
+            'opacity': y.isRevealed ? '0.3' : '1'}" class="button" (click)="button_click(y)">
+    {{y.isRevealed ? y.state : ''}}
+  </button>
+</div>
